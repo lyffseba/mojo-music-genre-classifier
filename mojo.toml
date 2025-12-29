@@ -1,0 +1,10 @@
+[project]
+name = "mojo-music-genre-classifier"
+version = "0.1.0"
+description = "Refactored music genre classification using Mojo for performance"
+
+[tool.mojo]
+# Mojo-specific config can go here
+
+[dependencies]
+# Add any external deps if needed

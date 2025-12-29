@@ -1,0 +1,52 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Mojo
+.mojo/
+__mojo_cache__/
+*.mojoc
+
+# Datasets
+data/
+*.jpg
+*.png
+*.csv
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Models
+models/
+*.h5
+*.pb
+*.onnx
+
+# Notebooks
+.ipynb_checkpoints/
