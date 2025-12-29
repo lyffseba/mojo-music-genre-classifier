@@ -2,12 +2,15 @@
 # Migrated from Keras to Mojo for performance and AI capabilities
 
 from python import *
+from models import *
 
 fn main():
     print("Starting Mojo Music Genre Classifier")
     prepare_data()
-    train_models()
-    evaluate_models()
+    let bn_model = create_bn_model()
+    let cw_model = create_cw_model()
+    train_models(bn_model, cw_model)
+    evaluate_models(bn_model, cw_model)
 
 # Data preparation function
 fn prepare_data():
@@ -92,10 +95,40 @@ fn prepare_data():
     
     print("Data preparation completed")
 
-# Placeholder for training
-fn train_models():
-    print("Training models - TODO: Implement in Mojo")
+# Training function
+fn train_models(bn_model: BNModel, cw_model: CWModel):
+    # Interop for data generators (placeholder)
+    keras = Python.import_module("tensorflow.keras")
+    # Assume data generators created in prepare_data
+    
+    # Training parameters
+    epochs = 10
+    lr = 1e-4
+    
+    # For each model
+    for model in [bn_model, cw_model]:
+        for epoch in range(epochs):
+            # Manual training loop
+            # Forward pass, loss, backward, update
+            # TODO: Implement with MAX
+            print("Training epoch", epoch, "for model")
+            
+            # LR scheduler
+            if epoch > 10:
+                lr *= 0.1
+            if epoch > 20:
+                lr *= 0.1
+            
+            # Callbacks: checkpoint, early stopping (manual)
+    
+    print("Training completed")
 
-# Placeholder for evaluation
-fn evaluate_models():
-    print("Evaluating models - TODO: Implement in Mojo")
+# Evaluation function
+fn evaluate_models(bn_model: BNModel, cw_model: CWModel):
+    # Plot histories (interop with matplotlib)
+    matplotlib = Python.import_module("matplotlib.pyplot")
+    
+    # Placeholder for histories
+    # Plot accuracy/loss for both models
+    
+    print("Evaluating models - TODO: Implement plots and inference")
